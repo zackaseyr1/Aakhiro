@@ -1,0 +1,15 @@
+<!-- myapp/templates/listing_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if not object.pk %}Create{% else %}Edit{% endif %} Listing</title>
+</head>
+<body>
+    <h1>{% if not object.pk %}Create{% else %}Edit{% endif %} Listing</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

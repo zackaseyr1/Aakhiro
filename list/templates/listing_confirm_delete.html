@@ -1,0 +1,16 @@
+<!-- myapp/templates/listing_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Listing</title>
+</head>
+<body>
+    <h1>Delete Listing</h1>
+    <p>Are you sure you want to delete "{{ listing.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, delete">
+    </form>
+    <a href="{% url 'listing-detail' listing.pk %}">Cancel</a>
+</body>
+</html>

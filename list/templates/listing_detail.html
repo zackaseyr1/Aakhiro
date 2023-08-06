@@ -1,0 +1,18 @@
+<!-- myapp/templates/listing_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ listing.title }}</title>
+</head>
+<body>
+    <h1>{{ listing.title }}</h1>
+    <p>{{ listing.content_arabic }}</p>
+    <p>Translation: {{ listing.translation }}</p>
+    <p>Description: {{ listing.description }}</p>
+    <p>Published: {{ listing.published }}</p>
+    <p>Featured: {{ listing.featured }}</p>
+
+    <a href="{% url 'listing-update' listing.pk %}">Edit</a>
+    <a href="{% url 'listing-delete' listing.pk %}">Delete</a>
+</body>
+</html>
